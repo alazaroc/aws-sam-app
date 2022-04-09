@@ -1,0 +1,14 @@
+version = 0.1
+[default]
+[default.pipeline_bootstrap]
+[default.pipeline_bootstrap.parameters]
+pipeline_user = "arn:aws:iam::139415085530:user/aws-sam-cli-managed-test-pipeline-res-PipelineUser-XN75DY8TFGL1"
+
+[test]
+[test.pipeline_bootstrap]
+[test.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::139415085530:role/aws-sam-cli-managed-test-pip-PipelineExecutionRole-1RT9YMZ60U7L8"
+cloudformation_execution_role = "arn:aws:iam::139415085530:role/aws-sam-cli-managed-test-CloudFormationExecutionR-FA52519RHRDD"
+artifacts_bucket = "aws-sam-cli-managed-test-pipeline-artifactsbucket-jf6hixn3rx29"
+image_repository = ""
+region = "eu-west-1"
