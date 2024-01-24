@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: AWS SAM CLI Nested Stack for Auto Dependency Layer Creation
+Metadata:
+  SamCliInfo: 1.107.0
+  key: AWS SAM CLI sync command
+Outputs:
+  helloFromLambdaFunction8583c9baDepLayer:
+    Value:
+      Ref: helloFromLambdaFunction8583c9baDepLayer
+Resources:
+  helloFromLambdaFunction8583c9baDepLayer:
+    Metadata:
+      CreatedBy: AWS SAM CLI sync command
+    Properties:
+      CompatibleRuntimes:
+      - nodejs20.x
+      ContentUri: /Users/alazaroc/Documents/MyProjects/github/aws/sam/sam/sam-app/.aws-sam/auto-dependency-layer/helloFromLambdaFunction8583c9baDepLayer
+      Description: Auto created layer for dependencies of function helloFromLambdaFunction
+      LayerName: sam-app7427b055-helloFromLambdaFunctio8583c9ba-DepLayer
+      RetentionPolicy: Delete
+    Type: AWS::Serverless::LayerVersion
+Transform: AWS::Serverless-2016-10-31

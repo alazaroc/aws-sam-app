@@ -16,8 +16,19 @@ Resources:
       Policies:
       - AWSLambdaBasicExecutionRole
       CodeUri: helloFromLambdaFunction
+      Layers:
+      - Fn::GetAtt:
+        - AwsSamAutoDependencyLayerNestedStack
+        - Outputs.helloFromLambdaFunction8583c9baDepLayer
     Metadata:
       SamResourceId: helloFromLambdaFunction
+  AwsSamAutoDependencyLayerNestedStack:
+    DeletionPolicy: Delete
+    Metadata:
+      CreatedBy: AWS SAM CLI sync command
+    Properties:
+      TemplateURL: /Users/alazaroc/Documents/MyProjects/github/aws/sam/sam/sam-app/.aws-sam/auto-dependency-layer/adl_nested_template.yaml
+    Type: AWS::CloudFormation::Stack
 Globals:
   Function:
     Tracing: Active

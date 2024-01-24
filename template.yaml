@@ -23,12 +23,18 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: src/handlers/hello-from-lambda.helloFromLambdaHandler
-      Runtime: nodejs14.x
+      Runtime: nodejs20.x
       Architectures:
-        - x86_64
+      - x86_64
       MemorySize: 128
       Timeout: 100
       Description: A Lambda function that returns a static string.
       Policies:
         # Give Lambda basic execution Permission to the helloFromLambda
-        - AWSLambdaBasicExecutionRole
+      - AWSLambdaBasicExecutionRole
+# # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Tracing: Active
+  Api:
+    TracingEnabled: true
