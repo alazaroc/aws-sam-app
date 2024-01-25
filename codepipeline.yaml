@@ -46,10 +46,10 @@ Parameters:
     Default: "sam-app"
   TestingPipelineExecutionRole:
     Type: String
-    Default: "arn:aws:iam::852439566690:role/aws-sam-cli-managed-test-pipe-PipelineExecutionRole-Fv4wReTqFrHy"
+    Default: "arn:aws:iam::00000000000:role/aws-sam-cli-managed-test-pipe-PipelineExecutionRole-Fv4wReTqFrHy"
   TestingCloudFormationExecutionRole:
     Type: String
-    Default: "arn:aws:iam::852439566690:role/aws-sam-cli-managed-test--CloudFormationExecutionRo-4iXZtj3Xzch9"
+    Default: "arn:aws:iam::00000000000:role/aws-sam-cli-managed-test--CloudFormationExecutionRo-4iXZtj3Xzch9"
   TestingArtifactBucket:
     Type: String
     Default: "aws-sam-cli-managed-test-pipeline--artifactsbucket-gro48levpwla"
